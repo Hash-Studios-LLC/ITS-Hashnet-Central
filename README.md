@@ -1,107 +1,133 @@
-# Internal Documentation Website
+# HashNet Central (Intranet)
 
-This repository contains the source code for our internal documentation website using [Docusaurus](https://docusaurus.io/).
+Welcome to our internal documentation website repository. This project uses [Docusaurus](https://docusaurus.io/), a modern static website generator optimized for technical documentation.
 
-## Table of Contents
+## Quick Start (TLDR)
 
-- [Internal Documentation Website](#internal-documentation-website)
-  - [Table of Contents](#table-of-contents)
-  - [Getting Started](#getting-started)
-  - [Building the Website](#building-the-website)
-  - [Commands](#commands)
-  - [Useful Resources](#useful-resources)
-  - [Contributing](#contributing)
+```bash
+git clone https://github.com/Hash-Studios-LLC/ITS-Hashnet-Central
+cd ITS-Hashnet-Central
+yarn install
+yarn start
+```
 
-## Getting Started
+## Prerequisites
 
-To get started, you will need to have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com/) installed on your machine. If you don't have them installed, you can follow the installation guides on their respective websites.
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (v16.14 or higher)
+- [Yarn](https://yarnpkg.com/) (v1.22 or higher)
+- [Git](https://git-scm.com/) for version control
 
-## Building the Website
+## Installation and Setup
 
-To build the documentation website, follow these steps:
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Hash-Studios-LLC/ITS-Hashnet-Central
+   cd ITS-Hashnet-Central
+   ```
 
-1. Clone the repository:
+2. **Install Dependencies**
+   ```bash
+   yarn install
+   ```
 
-    ```bash
-    git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-    ```
+## Development
 
-2. Navigate to the project directory:
+### Starting the Development Server
 
-    ```bash
-    cd YOUR-REPOSITORY
-    ```
+```bash
+yarn start
+```
+This will:
+- Start the local development server
+- Open your default browser to `http://localhost:3000`
+- Enable hot-reloading for real-time updates
 
-3. Install the dependencies:
+### Project Structure
 
-    ```bash
-    yarn install
-    ```
+```
+your-repository/
+├── docs/                 # Documentation markdown files
+├── src/                  # Source code for custom pages
+├── static/              # Static files (images, etc.)
+├── docusaurus.config.js # Main configuration file
+├── sidebars.js         # Sidebar configuration
+└── package.json        # Project dependencies and scripts
+```
 
-4. Start the development server:
+## Building for Production
 
-    ```bash
-    yarn start
-    ```
+1. **Generate Static Files**
+   ```bash
+   yarn build
+   ```
+   This creates optimized production build in the `build` directory.
 
-    This will start a local development server and open the website in your default browser. As you make changes to the source files, the site will automatically reload.
+2. **Test Production Build**
+   ```bash
+   yarn serve
+   ```
+   This serves the built website locally at `http://localhost:3000`
 
-5. Build the static site:
+## Available Scripts
 
-    ```bash
-    yarn build
-    ```
+| Command | Description |
+|---------|------------|
+| `yarn start` | Starts development server |
+| `yarn build` | Creates production build |
+| `yarn serve` | Serves production build locally |
+| `yarn clear` | Clears build cache |
+| `yarn test` | Runs test suite |
+| `yarn lint` | Checks code style |
 
-    This command generates the static files for the website in the `build` directory.
+## Documentation Standards
 
-6. Serve the static site locally (optional):
+When contributing to the documentation:
 
-    ```bash
-    yarn serve
-    ```
+1. **File Organization**
+   - Place new documentation in appropriate subdirectories under `docs/`
+   - Use kebab-case for file names (e.g., `getting-started.md`)
 
-    This command starts a local server to serve the static files in the `build` directory.
+2. **Markdown Guidelines**
+   - Use ATX-style headers (`#` for h1, `##` for h2)
+   - Include alternative text for images
+   - Use code blocks with appropriate language tags
 
-## Commands
+3. **Content Structure**
+   - Start each document with a clear title
+   - Include a brief introduction
+   - Use consistent heading hierarchy
+   - Add examples where applicable
 
-Here are some useful commands for working with this project:
+## Troubleshooting
 
-- `yarn install`: Install project dependencies
-- `yarn start`: Start the development server
-- `yarn build`: Generate static files for the website
-- `yarn serve`: Serve the static files locally
+Common issues and solutions:
 
-## Useful Resources
+1. **Build Failures**
+   - Clear cache: `yarn clear`
+   - Delete `node_modules` and reinstall
+   - Check Node.js version compatibility
+
+2. **Missing Dependencies**
+   ```bash
+   yarn install --check-files
+   ```
+
+3. **Port Conflicts**
+   - Change port in `docusaurus.config.js`
+   - Kill existing process using the port
+
+## Additional Resources
 
 - [Docusaurus Documentation](https://docusaurus.io/docs)
+- [Markdown Guide](https://www.markdownguide.org/)
+- [MDX Documentation](https://mdxjs.com/)
 - [Node.js Documentation](https://nodejs.org/en/docs/)
 - [Yarn Documentation](https://classic.yarnpkg.com/en/docs/)
 
-## Contributing
+## Support
 
-If you would like to contribute to this project, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bugfix:
-
-    ```bash
-    git checkout -b feature/your-feature-name
-    ```
-
-3. Commit your changes:
-
-    ```bash
-    git commit -m "Add your commit message"
-    ```
-
-4. Push to your branch:
-
-    ```bash
-    git push origin feature/your-feature-name
-    ```
-
-5. Open a pull request and describe the changes you have made.
+For internal support:
+- Create an issue in this repository
 
 ---
-
-Feel free to customize this `README.md` to better fit your project and organizational needs.

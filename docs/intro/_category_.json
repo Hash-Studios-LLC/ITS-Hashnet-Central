@@ -1,0 +1,8 @@
+{
+  "label": "Welcome to our Intranet",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Once stop shop for all things related to HashStudios"
+  }
+}
