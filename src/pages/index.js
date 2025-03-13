@@ -1,3 +1,4 @@
+import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -19,8 +20,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/intro.md">
+            Access HashStudios Documentation
           </Link>
         </div>
       </div>
@@ -32,10 +33,20 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title="Home"
+      description="HashStudios internal documentation and resources portal">
       <HomepageHeader />
       <main>
+        <div className="container margin-top--lg">
+          <div className="row">
+            <div className="col col--8 col--offset-2">
+              <div className="hash-banner text--center">
+                <h2>Welcome to the HashStudios Intranet</h2>
+                <p>Your central hub for company resources, documentation, and collaboration.</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <HomepageFeatures />
       </main>
     </Layout>

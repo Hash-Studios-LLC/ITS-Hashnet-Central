@@ -8,11 +8,13 @@ on:
       - main  # Trigger only on pushes to the main branch
     paths:
       - 'docs/**'  # Only trigger if files in the docs folder are updated
+      - 'src/**'   # Only trigger if files in the src folder are updated
   pull_request:
     branches:
       - main  # Trigger only on pull requests targeting the main branch
     paths:
       - 'docs/**'  # Only trigger if files in the docs folder are updated
+      - 'src/**'   # Only trigger if files in the src folder are updated
 
 
 jobs:
