@@ -26,15 +26,18 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '23'
           cache: 'npm'
           
       - name: Install dependencies
         run: npm ci
         
       - name: Build Docusaurus site
-        run: npm run build
+        run: npm build
         
+      - name: tree
+        run: tree
+
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
